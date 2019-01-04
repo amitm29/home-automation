@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTimerActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="30dp"
+                    android:text="x"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="monospace"
+                    android:textSize="28sp"
+                    android:layout_gravity="start"
+                    android:gravity="left"/>
+                <ImageView
+                    android:id="@+id/saveIV"
+                    android:src="@drawable/ic_save_24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:foregroundGravity="right"
+                    android:layout_height="match_parent"
+                    style="@style/AppTheme.ClickableViewBorderless" />
+                <ImageView
+                    android:id="@+id/deleteIV"
+                    android:src="@drawable/ic_delete_24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/AppTheme.ClickableViewBorderless" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/r_id_layout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textColorHint="@color/colorAccent"
+                    android:layout_marginStart="72dp"
+                    android:hint="Switch Number"
+                    android:layout_marginTop="32dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/r_id_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:paddingBottom="8dp"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/duration_layout"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorAccent"
+                    android:layout_marginStart="72dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Duration (in seconds)"
+                    android:layout_marginTop="8dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/duration_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:inputType="number"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        android:paddingBottom="8dp"
+                        android:textSize="14sp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL1"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/action_spnr"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:entries="@array/actions"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/title_layout"
+                android:layout_margin="16dp"
+                android:layout_marginStart="72dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Title (Optional)"
+                android:layout_marginTop="16dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_save_24dp" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

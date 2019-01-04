@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddControlActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="30dp"
+                    android:text="x"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="monospace"
+                    android:textSize="28sp"
+                    android:layout_gravity="start"
+                    android:gravity="left"/>
+                <ImageView
+                    android:id="@+id/saveIV"
+                    android:src="@drawable/ic_save"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:foregroundGravity="right"
+                    android:layout_height="match_parent"
+                    style="@style/AppTheme.ClickableViewBorderless" />
+                <ImageView
+                    android:id="@+id/deleteIV"
+                    android:src="@drawable/ic_delete"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/AppTheme.ClickableViewBorderless" />
+            </LinearLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginStart="72dp"
+                android:hint="Title"
+                android:layout_marginTop="32dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textCapWords"
+                    android:textColorHint="#FFFFFF"
+                    android:paddingBottom="8dp"
+                    android:textSize="30sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_margin="16dp"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginStart="72dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Note"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/note_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:inputType="textPersonName"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL1"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/output_layout"
+                android:layout_margin="16dp"
+                android:layout_marginStart="72dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Output Message"
+                android:layout_marginTop="16dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/output_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout"
+                android:layout_margin="16dp"
+                android:layout_marginStart="72dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Expected Input"
+                android:layout_marginTop="16dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:paddingBottom="8dp"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_save_24dp" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,10 @@
+Android App/Home/*.iml
+Android App/Home/.gradle/
+Android App/Home/local.properties
+Android App/Home/.idea/libraries
+Android App/Home/.idea/modules.xml
+Android App/Home/.idea/workspace.xml
+Android App/Home/.DS_Store
+Android App/Home/build
+Android App/Home/captures
+Android App/Home/.externalNativeBuild

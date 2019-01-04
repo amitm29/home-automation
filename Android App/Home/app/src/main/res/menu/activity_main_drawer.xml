@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            />
+        <item
+            android:id="@+id/nav_timers"
+            android:title="Timers"
+            />
+        <item
+            android:id="@+id/nav_keypad"
+            android:title="Keypad"
+            />
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_stats"
+        android:title="Stats"
+        />
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        />
+    </group>
+
+    <item android:title="More Options">
+
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:title="Share"
+                />
+            <item
+                android:id="@+id/app_guide"
+                android:title="App Guide"
+                />
+            <item
+                android:id="@+id/rate_app"
+                android:title="Rate App"
+                />
+            <item
+                android:id="@+id/contact_us"
+                android:title="Query/Feedback"
+                />
+            <item
+                android:id="@+id/about_dev"
+                android:title="About Developer"
+                />
+
+        </menu>
+
+    </item>
+
+
+</menu>

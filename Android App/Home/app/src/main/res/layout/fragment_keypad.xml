@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+
+        <TableLayout
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TableRow style="@style/keyboard_row">
+
+                <TextView
+                    android:id="@+id/key_1"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_one"/>
+
+                <TextView
+                    android:id="@+id/key_2"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_two"/>
+
+                <TextView
+                    android:id="@+id/key_3"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_three"/>
+
+                <TextView
+                    android:id="@+id/key_A"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_A"/>
+
+            </TableRow>
+
+
+
+            <TableRow style="@style/keyboard_row">
+
+                <TextView
+                    android:id="@+id/key_4"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_four"/>
+
+                <TextView
+                    android:id="@+id/key_5"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_five"/>
+
+                <TextView
+                    android:id="@+id/key_6"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_six"/>
+
+                <TextView
+                    android:id="@+id/key_B"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_B"/>
+
+            </TableRow>
+
+
+
+            <TableRow style="@style/keyboard_row">
+
+                <TextView
+                    android:id="@+id/key_7"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_seven"/>
+
+                <TextView
+                    android:id="@+id/key_8"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_eight"/>
+
+                <TextView
+                    android:id="@+id/key_9"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_nine"/>
+
+                <TextView
+                    android:id="@+id/key_C"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_C"/>
+
+            </TableRow>
+
+            <TableRow style="@style/keyboard_row">
+
+                <TextView
+                    android:id="@+id/key_star"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_star"
+                    />
+
+                <TextView
+                    android:id="@+id/key_0"
+                    style="@style/keyboard_number_button"
+                    android:text="@string/number_zero"/>
+
+                <TextView
+                    android:id="@+id/key_hash"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_hash"
+                    />
+
+                <TextView
+                    android:id="@+id/key_D"
+                    style="@style/keyboard_button"
+                    android:text="@string/btn_D"/>
+
+            </TableRow>
+        </TableLayout>
+</LinearLayout>
